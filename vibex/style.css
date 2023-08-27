@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: #000;
+    color: #fff;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.container {
+    min-height: 72vh;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: fit-content;
+    border-radius: 12px;
+    padding: 34px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+}
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 14px;
+}
+
+.icons i {
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.icons i:hover {
+    color: #1db954;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+    appearance: none;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #555;
+    outline: none;
+    margin-top: 10px;
+}
+
+#myProgressBar::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #1db954;
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 74px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.songItem {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    align-items: center;
+    border-radius: 34px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.songItem.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.songItem:hover {
+    transform: translateY(-5px);
+}
+
+.songItem img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.timestamp {
+    margin: 0 15px;
+}
+
+.timestamp i {
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s ease-in-out;
+}
+
+.timestamp i:hover {
+    color: #1db954;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.4s ease-in;
+}
+
+.songInfo img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: glowing 2s infinite;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px #1db954, 0 0 20px #1db954;
+    }
+    50% {
+        box-shadow: 0 0 20px #1db954, 0 0 40px #1db954;
+    }
+    100% {
+        box-shadow: 0 0 5px #1db954, 0 0 20px #1db954;
+    }
+}
+
+.register,
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.register .container,
+.login .container {
+    width: 400px;
+    padding: 40px;
+}
+
+.register h1,
+.login h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.register form,
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.register label,
+.login label {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.register input,
+.login input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.register button,
+.login button {
+    padding: 10px 20px;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.register button:hover,
+.login button:hover {
+    background-color: #19843f;
+}
+
+.gradient-bg {
+    background: linear-gradient(to bottom right, #ff105f, #ffad06);
+}
+
+.neon-effect {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7), 0px 0px 20px rgba(255, 255, 255, 0.5), 0px 0px 30px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 255, 0.1);
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front-card,
+.back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+}
+
+.front-card {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.back-card {
+    background-color: #000;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+}
+

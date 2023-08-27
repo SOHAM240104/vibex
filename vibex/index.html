@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIBEX - Your favourite music is here</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="ACTUAL DESIGN -.png" alt="Spotify"> >IbeX</li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <!-- Search functionality -->
+            <form class="search-form">
+                <input type="text" id="searchInput" placeholder="Search for songs or artists" oninput="searchSongs()">
+                <i class="fas fa-search"></i>
+            </form>
+        </ul>
+    </nav>
+    <section id="about">
+        <div class="section-container neon-effect">
+            <h2>Unleash the Musical Beat with VIBEX</h2>
+            <p>Step into the sonic realm of VIBEX, where rhythm and melody collide to create an electrifying symphony. We're not just a music platform; we're a pulsating journey through genres that move your soul.</p>
+            
+            <p>Get ready to amplify your moments, whether it's the nostalgic croon of jazz or the heart-thumping bass of EDM. With VIBEX, the soundwaves are yours to explore.</p>
+        </div>
+    </section>
+    
+    </section>
+
+    <div class="container">
+        <div class="songList">
+            <h1> - No Copyright Sounds</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="0"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="1"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="2"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="3"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="4"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="5"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="6"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="7"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="8"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="9"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="songBanner"></div>
+    <div class="progress-bar-container">
+        <!-- Progress bar for the currently playing song -->
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i>
+        </div>
+        <div class="progress-bar-container">
+            <!-- Progress bar for the currently playing song -->
+            <div class="progress-bar" id="nowPlayingProgressBar"></div>
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif">
+            <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+        </div>
+    </div>
+
+
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <div class="section-container neon-effect">
+            <h2>Feedback and Suggestions</h2>
+            <p>We value your feedback and suggestions to improve our platform. Please take a moment to share your
+                thoughts
+                with us. Your feedback is essential in helping us enhance the user experience and bring you the best
+                music
+                streaming service.</p>
+            <form action="submit_feedback.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="glitch-effect" data-text="Submit Feedback">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
